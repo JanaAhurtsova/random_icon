@@ -7,8 +7,11 @@ module.exports = {
     'plugin:react-hooks/recommended',
     'prettier',
   ],
-  ignorePatterns: ['dist', '.eslintrc.cjs'],
+  ignorePatterns: ["node_modules/*", 'dist/*', '.eslintrc.cjs', "index.d.ts"],
   parser: '@typescript-eslint/parser',
+  parserOptions: {
+    project: './tsconfig.json',
+  },
   plugins: ['react-refresh'],
   rules: {
     'react-refresh/only-export-components': [
